@@ -18,3 +18,11 @@ provider aws {
   }
 }
 }
+
+resource "aws_instance" "web" {
+  ami = "ami-0ec10929233384c7f"
+  instance_type = "t3.micro"
+  tags {
+    Name = "dev-web-server"
+  }
+}
